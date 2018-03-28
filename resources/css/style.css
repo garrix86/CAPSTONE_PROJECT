@@ -79,10 +79,6 @@ video {
   top: 4rem; /* To offset for fixed header. */
 }
 
-.banner {
-  width: 65%;
-}
-
 .images {
   overflow: hidden;
 }
@@ -119,7 +115,9 @@ video {
   color: #84B9EE;
 }
 
-
+.banner {
+  width: 65%;
+}
 /*dark boxes*/
 #second_section #box_3,
 #fourth_section #box_1 {
@@ -342,246 +340,181 @@ footer .banner {
   display: flex;
   justify-content: space-between;
   margin: 1rem 1.5rem 2rem 1.5rem;
-  ;
 }
 
 footer li {
   display: inline-block;
   padding-left: 1rem;
 }
-
-
-/*MEDIA QUERIES*/
-
-@media screen and (max-width: 1440px) and (max-width: 1600px){
-  #third_section .boxes {
-    /*flex-flow: column;*/
-    justify-content: space-between;
-  }
-
-  #third_section .boxe {
-    width: 30%;
-  }
-
-  .banner {
-    width: 80%;
-  }
-  header .content {
-    width: 80%;
-  }
+.mobile {
+ display: none;
 }
 
-@media screen and (max-width:768px){
-  #third_section .boxes {
-    flex-flow: column;
+
+/*---MEDIA QUERIES---*/
+/* LAPTOP */
+@media screen and (max-width:1645px) {
+  .boxes {
+    justify-content: space-between;
+    margin: auto;
   }
 
   #third_section .boxe {
-    width: 100%;
-  }
-
-  .boxes {
-    padding: 0 1.7rem 1rem 1.7rem;
-  }
-
-  .banner {
-    width: 100%;
-  }
-
-  header .content {
-    width: 100%;
-  }
-
-  .boxe.one,
-  .boxe.two,
-  .boxe.four,
-  .boxe.five,
-  .boxe.six {
+    width: 43%;
     margin-right: 0;
     margin-bottom: 2rem;
   }
 }
+/*laptop to tablet*/
+@media screen and (min-width:1024px){
+  .banner {
+    width: 75%;
+  }
 
-@media screen and (min-width: 450px){
-    .mobile {
-      display: none;
-    }
+  header .content {
+    width: 75%;
+  }
 }
 
-@media screen and (min-width: 320px) and (max-width:450px){
-    body {
-      font-size: 12px;
-      display: flex;
-      flex-direction: column;
-    }
+/*-TABLET-*/
+/* Landscape orientation*/
+@media screen and (max-width:1024px){
+  .banner {
+    width: 100%;
+  }
 
-    header {
-      position: static;
-    }
+  header .content {
+    width: 100%;
+  }
+}
 
-    header .content {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
+/*Portrait orientation*/
+@media screen and (max-width: 768px){
+/*global*/
+  .desktop {
+    display: none;
+  }
 
-    .main-content {
-      position: static;
-      margin: 0;
-    }
+  .mobile {
+    display: block;
+  }
 
-    header nav.mobile {
-      width: 100%;
-      margin: 0;/********Important remove margin default in Nav*/
-      }
-
-    header .mobile ul {
-      display: flex;
-      justify-content:space-around;
-      align-items: center;
-    }
-
-    /*****Global*****/
-    .banner {
-      width: 100%;
-    }
-
-    .aside_info {
-      width: 100%;
-      margin: 0;
-    }
-
-    .box .images {
-      width: 100%;
-      margin: 0;
-    }
-
-    .aside_info {
-      width: 100%;
-      padding: 0.75rem 0 0 0;
-    }
-
-    .desktop {
-      display: none;
-    }
-
-    .details {
-      padding: 0.65rem;
-    }
-    /*first_section*/
-
-    #first_section {
-      display: flex;
-      flex-direction: column;
-    }
-
-    #first_section .aside,
-    #first_section .header,
-    #first_section .images {
-      width: 100%;
-      padding: 0;
-      margin: 0;
-    }
-
-    #first_section .aside {
-      align-items: center;
-      padding-bottom: 1rem;
-    }
-
-    #first_section h1,
-    #first_section h3 {
-      margin: 1rem;
-    }
-/**********************/
-
-    #second_section {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    #second_section .main-side {
-      width: 100%;
-      padding: 0;
-      margin: 0;
-    }
-
-    #second_section .main-side .images {
-      margin: 0;
-      padding: 0;
-    }
-
-    #second_section .text {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 1rem;
-    }
-
-    /*#second_section h2 {
-      display: inline-block;
-      background-color: yellow;
-    }*/
-
-    #second_section .box {
-      display: flex;
-      flex-direction: column;
-    }
-
-/*******************/
-    #third_section .container {
-      background-color:#f7f7f7;
-      margin-bottom: 1rem;
-    }
-
-    #listy ul li {
-      display: block;
-      text-decoration: none;
-      padding: 1.25rem;
-      margin: 0 1rem 0.66rem 1rem;
-      background-color: #ebebeb;
-    }
-
-    #listy li a {
-      color: #4E4E4E;
-    }
-/*comportement*/
-    #listy li a:hover {
-      color: red;
-    }
-
-    #listy ul li:hover {
-      background-color: pink;
-      color: red;
-    }
-
-    #listy {
-      background-color: #f7f7f7;
-      margin-bottom:1.75rem;
-      padding: 0;
-    }
-
-/*End comportement*/
-    #fourth_section .container{
-    padding: 0;
+/*header*/
+  header nav {
     margin: 0;
-    }
+  }
 
-    #fourth_section h2 {
-      margin: 2rem 0;
-    }
+  nav.mobile {
+    width: 100%;
+  }
 
-    #fourth_section .main-side {
-      width: 100%;
-      margin:0;
-    }
+  .mobile ul {
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-    #fourth_section video {
-      margin-bottom: 2rem;
-    }
+  .mobile li {
+    margin: 0;
+    padding: 0;
+  }
 
-    footer .banner {
-      display: flex;
-      justify-content: center;
-    }
+/*section 2*/
+  .aside_info {
+   width: 100%;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .aside_info .details {
+    margin-left: 1rem;
+  }
+
+  .box .mobile {
+    width: 60%;
+    padding: 0.65rem;
+  }
+
+  #second_section{
+    margin-bottom: 2rem;
+  }
+
+  #listy ul {
+    display: block;
+    width: 100%;
+  }
+
+  #listy ul li a {
+    display: block;
+    padding: 1.25rem;
+    background-color: #ebebeb;
+    color: #4E4E4E;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.07rem;
+    border-bottom: 0.15rem solid #E4E4E5;
+  }
+
+  #listy li a:hover {
+    background-color: #4E4E4E;
+    color: #ebebeb;
+    font-size: 1.35rem;
+  }
+
+  #fourth_section .main-side{
+    width: 100%;
+    margin: 1rem 0 1.5rem;
+  }
+}
+
+/*mobile*/
+@media screen and (max-width: 768px){
+  #first_section {
+  flex-direction: column;
+}
+
+  #first_section .images {
+    width: 100%;
+    padding: 0;
+}
+
+  #first_section .aside {
+    width: 100%;
+  }
+
+  #first_section .header{
+   width: 100%;
+  }
+
+  #first_section h1 {
+    margin:0;
+    padding: 2rem 1rem;
+
+  }
+
+  #first_section h3 {
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  #first_section .button {
+    margin: 0 auto 2rem;
+  }
+
+  .box {
+    flex-direction: column;
+  }
+
+  .box .mobile {
+    width: 100%;
+    overflow: hidden;
+    padding:0;
+  }
+
+  .aside_info .details{
+    margin: 1rem 1rem;
+  }
 }
